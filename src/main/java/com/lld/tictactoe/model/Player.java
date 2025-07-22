@@ -1,0 +1,4 @@
+package com.lld.tictactoe.model;
+
+public class Player {
+}
