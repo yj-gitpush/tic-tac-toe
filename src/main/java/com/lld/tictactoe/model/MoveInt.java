@@ -5,8 +5,10 @@ import com.lld.tictactoe.service.BoardManagerInt;
 
 public interface MoveInt {
     public boolean apply(final BoardManagerInt boardManager);
+    public boolean undo(final BoardManagerInt boardManager);
     public boolean isValid(final BoardManagerInt boardManager);
     public Integer getX();
     public Integer getY();
+    public Player getPlayer();
 
 }

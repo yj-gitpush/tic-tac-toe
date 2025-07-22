@@ -11,15 +11,21 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MarkingMove implements MoveInt{
-    private int x;
-    private int y;
+    private Integer x;
+    private Integer y;
     private Player player;
 
     public boolean apply(final BoardManagerInt boardManager){
-        if(!isValid(boardManager)){
+        if(!this.isValid(boardManager)){
             return false;
         }
         boardManager.mark(this);
+        return true;
+    }
+
+    @Override
+    public boolean undo(BoardManagerInt boardManager) {
+        boardManager.unmark(this);
         return true;
     }
 

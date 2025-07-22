@@ -11,4 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Cell {
     private Player player;
+    public void unmark(){
+        player = null;
+    }
 }
